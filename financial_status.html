@@ -7,15 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="Images/Bank_account_fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <title>Financial Status</title>
 </head>
 
-<body>
+<body class="bg-violet-600 h-screen">
     <header>
 
-        <h1>Your Account Status</h1>
+        <h1 class="text-3xl mt-14   mb-10 text-center">Your Account Status</h1>
+
+
     </header>
-    <script src="JS/login.js"></script>
+    <main>
+        <div class="grid grid-cols-3 mx-96 mt-16">
+            <div class="pl-28 border-solid border-4 border-violet-900 pt-4 pb-20 text-xl bg-violet-400 ">
+                <h2>Deposit</h2>
+                <h3 class="px-14 mt-2.5"><span id="Deposit-amount">00</span> Taka</h3>
+            </div>
+            <div class="pl-20 border-solid border-4 border-violet-900 pt-4 pb-20  text-xl ml-10 bg-violet-400">
+                <h2>Withdraw</h2>
+                <h3 class="px-14 mt-2.5"><span id="Withdraw-amount">00</span> Taka</h3>
+            </div>
+            <div class=" pl-16 border-solid border-4 border-violet-900 pt-4 pb-20  text-xl ml-10 bg-violet-400">
+                <h2>Current
+                    Amount</h2>
+                <h3 class="px-14 mt-2.5"><span id="current-amount">00</span> Taka</h3>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 mx-96 mt-16">
+            <section id="drop-id">
+
+                <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                    class=" text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center inline-flex items-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800"
+                    type="button">Choose Your Option<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg></button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownDivider"
+                    class="hidden z-10 w-44 bg-violet-300 rounded divide-y divide-violet-100 shadow dark:bg-violet-700 dark:divide-violet-600"
+                    data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 10.4px, 0px);">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-violet-600" aria-labelledby="dropdownDividerButton">
+                        <div
+                            class=" option block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-100 dark:hover:text-white">
+                            Deposit
+
+                        </div>
+
+                        <div
+                            class=" option block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                            Withdraw
+                        </div>
+                </div>
+            </section>
+
+            <input id="input-field" type="text" Placeholder="Enter your amount"
+                class="border-4 border-solid border-indigo-500/75 ml-8 pl-6">
+            <button type="button" id="btn-submit"
+                class="text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-900 ml-8">Submit</button>
+
+        </div>
+    </main>
+    <script src="JS/financial_state.js"></script>
+
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
 </body>
 
 
